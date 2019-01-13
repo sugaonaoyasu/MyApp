@@ -44,6 +44,6 @@ ja:
     attributes:
       shop:
     　category_id: '都道府県'
-    　user: 投稿者
-    　address: 住所
+    　user: '投稿者'
+    　address: '住所'
   
