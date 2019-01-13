@@ -19,6 +19,11 @@
   <strong>Address:</strong>
   <%= @article.address %>
 </p>
+<%= content_tag(:iframe, 'map', 
+src:'https://www.google.com/maps/embed/v1/place?key=AIzaSyCq0ZRsxg1GeSHa82hmumdJPNC84v-R3Og&q=' + @article.address, 
+width: 800, height: 400, frameborder: 0) %>
+
+<br>
 
 <% if user_signed_in? && @article.user_id == current_user.id %>
   <%= link_to 'Edit', edit_article_path(@article) %> |
