@@ -288,3 +288,4 @@ Devise.setup do |config|
   #   include Turbolinks::Controller
   # end
 end
+Refile.secret_key = 'b9e637257aace94c886c5208295e6f9bde7a49ea3f39608e59ce1660a588ea2186cebcd5134267ec80ef7a83b201a2fa09ff6d21ee30098315eb626002929a36'
