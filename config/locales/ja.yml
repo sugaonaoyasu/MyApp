@@ -29,10 +29,21 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  articles: 'Articles'
-  category: 'Category'
-  user: 'User'
-  address: 'Address'
-  content: 'Content'
+ja:
+  hello: "世界の皆さん、こんにちは"
+  articles: '投稿リスト'
+  category: '都道府県'
+  user: '投稿者'
+  address: '住所'
+  content: 'タイトル'
+  
+  activerecord:
+    models:
+    articles: '投稿'
+
+    attributes:
+      shop:
+    　category_id: '都道府県'
+    　user: 投稿者
+    　address: 住所
+  
