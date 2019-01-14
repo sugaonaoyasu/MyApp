@@ -1,25 +1,27 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
 <p>
-  <strong>User:</strong>
-  <%= @article.user.name %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @article.category.name %>
-</p>
-
-<p>
-  <strong>Content:</strong>
+  <strong>タイトル:</strong>
   <%= @article.content %>
 </p>
 
 <p>
   <%= attachment_image_tag @article, :image, :fill, 700, 500, format: 'jpeg' %>
 </p>
+
 <p>
-  <strong>Address:</strong>
+  <strong>投稿者:</strong>
+  <%= @article.user.name %>
+</p>
+
+<p>
+  <strong>都道府県:</strong>
+  <%= @article.category.name %>
+</p>
+
+
+<p>
+  <strong>住所:</strong>
   <%= @article.address %>
 </p>
 

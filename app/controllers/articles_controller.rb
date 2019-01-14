@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to @article, notice: '投稿しました。' }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
     if @article.user_id == current_user.id
       respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to @article, notice: '更新しました。' }
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit }
@@ -53,7 +53,7 @@ class ArticlesController < ApplicationController
       end
     end
     else
-      redirect_to @article, notice: "You don't have permission."
+      redirect_to @article, notice: "権限がありません。"
     end 
   end
 
@@ -62,12 +62,9 @@ class ArticlesController < ApplicationController
  def destroy
    if @article.user_id == current_user.id
       @article.destroy
-      msg = "Article was successfully destroyed."
-   else
-      msg = "You don't have permission."
    end
     respond_to do |format|
-      format.html { redirect_to articles_url, notice: ' msg ' }
+      format.html { redirect_to articles_url, notice: '削除しました。' }
       format.json { head :no_content }
     end
  end
